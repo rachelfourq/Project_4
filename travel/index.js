@@ -5,13 +5,18 @@ var app = express();
 
 var mongoose = require('mongoose');
 var Travel = require('./models/travel');
-mongoose.connect('mongodb://localhost/travels');
+var activities = require('./models/activities')
+
+mongoose.connect('mongodb://localhost/*');
+// mongoose.connect('mongodb://localhost/activities');
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/api/travels', require('./controllers/travel'));
+app.use('/api/activities', require('./controllers/activities'))
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'public/index.html'));

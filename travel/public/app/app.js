@@ -13,10 +13,10 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: 'app/views/show.html',
     controller: 'ShowCtrl'
   })
-  .when('/new', {
-    templateUrl: 'app/views/new.html',
-    controller: 'TravelCtrl'
-  })
+  // .when('/new', {
+  //   templateUrl: 'app/views/new.html',
+  //   controller: 'TravelCtrl'
+  // })
   .when('/:id', {
     templateUrl: 'app/views/:id.html'
   })

@@ -1,5 +1,6 @@
 var express = require('express');
 var Travel = require('../models/travel');
+var Activities = require('../models/activities')
 var router = express.Router();
 
 router.route('/')
@@ -35,5 +36,28 @@ router.route('/:id')
       res.send({'message': 'success'});
     });
   });
+
+  router.route('/:id/activities/:activity')
+ .get(function(req, res) {
+    console.log('travel')
+    Travel.findById(req.params.id, function(err, travel) {
+      console.log('inside travel')
+      if (err) return res.status(500).send(err);
+      res.send(travel);
+    });
+  })
+  .post(function(req, res) {
+    console.log('working')
+    Travel.findById(req.params.id, function(err, travel) {
+      Activities.findById(req.params.activity, function(err, activity) {
+        travel.activities.push(activity);
+        travel.save(function(err) {
+          if (err) return res.status(500).send(err);
+          res.send({'message': 'success'});
+        });
+      });
+    });
+  });
+
 
 module.exports = router;
