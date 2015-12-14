@@ -1,0 +1,10 @@
+<h1>All Our Airplanes</h1>
+<a href="/">Back</a>
+
+<div class="well" ng-repeat="airplane in showPlanes">
+	<h2>{{airplane.manufacturer}}</h2>
+	<h3>{{airplane.model}}</h3>
+	<img ng-src='{{airplane.image}}' class="img-responsive">
+	<p>Number of engines: {{airplane.engines}}</p>
+	<img ng-src='{{airplane.image}}' class="img-responsive">	
+</div>
