@@ -13,12 +13,14 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     templateUrl: 'app/views/show.html',
     controller: 'ShowCtrl'
   })
-  // .when('/new', {
-  //   templateUrl: 'app/views/new.html',
-  //   controller: 'TravelCtrl'
-  // })
+  .when('/duration', {
+    templateUrl: 'app/views/duration.html'
+  })
   .when('/:id', {
     templateUrl: 'app/views/:id.html'
+  })
+  .when('/itenerary', {
+    templateUrl: 'app/views/itenerary.html'
   })
   .otherwise({
     templateUrl: 'app/views/404.html'
