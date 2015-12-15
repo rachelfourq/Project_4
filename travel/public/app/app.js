@@ -1,4 +1,4 @@
-var app = angular.module('TravelApp', ['TravelServices', 'TravelCtrls', 'ngRoute']);
+var app = angular.module('TravelApp', ['TravelServices', 'TravelCtrls', 'ngRoute', 'ui.materialize']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider

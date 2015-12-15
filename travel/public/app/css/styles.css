@@ -1,0 +1,18 @@
+/*.carddemoBasicUsage md-card {
+  min-height: 250px; }
+
+md-card>:not(md-card-content) img, md-card>img {
+  box-sizing : border-box;
+}*/
+/*
+.carddemoBasicUsage md-card {
+  max-height: 250px;
+}
+
+md-card>:not(md-card-content) img, md-card>img {
+
+  box-sizing : border-box;
+}
+.md-card-image {
+	max-height: 200px;
+}*/
