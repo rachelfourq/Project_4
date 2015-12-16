@@ -9,24 +9,16 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .when('/about', {
     templateUrl: 'app/views/about.html'
   })
-  // .when('/show', {
-  //   templateUrl: 'app/views/show.html',
-  //   controller: 'ShowCtrl'
-  // })
   .when('/duration', {
     templateUrl: 'app/views/duration.html',
     controller: 'TravelCtrl'
   })
-  .when('/itenerary', {
-    templateUrl: 'app/views/itenerary.html',
-    controller: 'IteneraryCtrl'
+  .when('/itinerary', {
+    templateUrl: 'app/views/itinerary.html',
+    controller: 'ItineraryCtrl'
   })
-  // .when('/:id', {
-  //   templateUrl: 'app/views/:id.html'
-  // })
   .otherwise({
     templateUrl: 'app/views/404.html'
   });
-
   $locationProvider.html5Mode(true);
 }]);

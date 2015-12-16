@@ -1,12 +1,6 @@
 <h1>Duration</h1>
-
-<form ng-submit='saveDuration()' id='durationForm'>
-	<input id='myRadioBtn' type="radio" ng-model="duration" value="1">1<br>
-	<input id='myRadioBtn' type="radio" ng-model="duration" value="2">2</br>
-	<input id='myRadioBtn' type="radio" ng-model="duration" value="3">3</br>
-	<input id='myRadioBtn' type="radio" ng-model="duration" value="4">4</br>
-	<input id='myRadioBtn' type="radio" ng-model="duration" value="5">5</br>
-	<button type='submit'>Next</button>
-</form>
  
-
+  <div class="col s12 m3" ng-repeat='time in duration'>
+        <a href='/itinerary' ng-click="saveDuration(time.value)">{{time.value}}
+  		</a> 
+  </div>		     

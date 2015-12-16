@@ -1,14 +1,29 @@
 <h1>Destinations</h1>
 <a href="/">Home</a>
 
+<div class="itnContainer">
+    <div ng-repeat="trip in showTrips | filter:{ destination: myCity }">
 
-<div class="well" ng-repeat="trip in showTrips">
-  <h2>{{trip.destination}}</h2>
-  <h4>{{trip.name}}</h4>  
+        <p> {{ trip.destination }}</p>
+        <p>{{ trip.name }}</p>
+        <p> {{ trip.duration }}</p>
+    </div>
 </div>
 
+{{myCity}}
+{{myDuration}}
+<!-- {{showTrips}}
+City: {{filteredCity}} -->
 
-<div class="container">
+
+
+
+<!-- <div class="well" ng-repeat="trip in showTrips">
+  <h2>{{trip.destination}}</h2>
+  <h4>{{trip.name}}</h4>  
+</div> -->
+
+<!-- <div class="container">
   <div class="page-header">
     <h1 id="timeline">Timeline</h1>
   </div>
@@ -42,4 +57,4 @@
       </div>
     </li>
   </ul>
-</div>
+</div> -->
