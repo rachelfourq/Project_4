@@ -14,8 +14,8 @@ router.route('/')
     Travel.create(req.body, function(err, travel) {
       if (err) return res.status(500).send(err);
       res.send(travel);
-    });
   });
+});
 
 router.route('/:id')
   .get(function(req, res) {
@@ -34,18 +34,18 @@ router.route('/:id')
     Travel.findByIdAndRemove(req.params.id, function(err) {
       if (err) return res.status(500).send(err);
       res.send({'message': 'success'});
-    });
   });
+});
 
-  router.route('/:id/activities/:activity')
- .get(function(req, res) {
+router.route('/:id/activities/:activity')
+  .get(function(req, res) {
     console.log('travel')
     Travel.findById(req.params.id, function(err, travel) {
       console.log('inside travel')
       if (err) return res.status(500).send(err);
       res.send(travel);
-    });
-  })
+  });
+})
   .post(function(req, res) {
     console.log('working')
     Travel.findById(req.params.id, function(err, travel) {
@@ -56,8 +56,7 @@ router.route('/:id')
           res.send({'message': 'success'});
         });
       });
-    });
   });
-
+});
 
 module.exports = router;

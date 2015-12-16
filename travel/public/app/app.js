@@ -9,17 +9,17 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
   .when('/about', {
     templateUrl: 'app/views/about.html'
   })
-  .when('/show', {
-    templateUrl: 'app/views/show.html',
-    controller: 'ShowCtrl'
-  })
+  // .when('/show', {
+  //   templateUrl: 'app/views/show.html',
+  //   controller: 'ShowCtrl'
+  // })
   .when('/duration', {
     templateUrl: 'app/views/duration.html',
-    controller: 'DurCtrl'
+    controller: 'TravelCtrl'
   })
   .when('/itenerary', {
-    templateUrl: 'app/views/itenerary.html'
-    // controller: 'iteneraryCtrl'
+    templateUrl: 'app/views/itenerary.html',
+    controller: 'IteneraryCtrl'
   })
   // .when('/:id', {
   //   templateUrl: 'app/views/:id.html'
