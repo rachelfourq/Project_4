@@ -1,4 +1,4 @@
-angular.module('TravelCtrls', ['TravelServices', 'ui.materialize']).controller('TravelCtrl', ['$scope', 'Travel', 'Activities', function($scope, Travel, Activities) {
+angular.module('TravelCtrls', ['TravelServices']).controller('TravelCtrl', ['$scope', 'Travel', 'Activities', function($scope, Travel, Activities) {
     $scope.travels = [];
     Travel.query(function success(data) {
         console.log(data);
@@ -15,7 +15,6 @@ angular.module('TravelCtrls', ['TravelServices', 'ui.materialize']).controller('
     });
 }])
 .controller('ShowCtrl', ['$scope', 'Travel', function($scope, Travel) {
-
 		$scope.travels = [];
 	Travel.query(function success(data) {
 		console.log(data)
@@ -25,7 +24,6 @@ angular.module('TravelCtrls', ['TravelServices', 'ui.materialize']).controller('
 }])	
 
 .controller('ShowCtrl', ['$scope', 'Activities', function($scope, Activities) {
-
 		$scope.activities = [];
 	Activities.query(function success(data) {
 		console.log(data)
@@ -34,8 +32,18 @@ angular.module('TravelCtrls', ['TravelServices', 'ui.materialize']).controller('
   	})
 }])	
 
+.controller('IteneraryCtrl', ['$scope', 'Travel', 'Activities', function($scope, Travel, Activities) {
+    Travel.findOne({ filter: { where: { duration: 4 } } });
+    $scope.showItenerary = data;
+}])
 
-// .controller('GridCtrl', ['$scope', function ($scope) {
-//     $scope.grid = [[1,2,3]];
-//   }])
+.controller('DurCtrl', ['$scope', function($scope) { 
+    $scope.duration;
+    $scope.saveDuration = function() {
+        console.log($scope.duration)  
+    }
+}])
+
+
+
 

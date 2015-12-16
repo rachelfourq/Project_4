@@ -1,21 +1,30 @@
-var slider = document.getElementById('test5');
-console.log('ready')
- noUiSlider.create(slider, {
-  start: [20, 80],
-  connect: true,
-  step: 1,
-  range: {
-    'min': 0,
-    'max': 100
-  },
-  format: wNumb({
-    decimals: 0
-  })
- });
+// $(document).ready(function() {
+
+// 	console.log('working')
+
+	$('#durationForm').on('submit', function(e){
+	 e.preventDefault();
+	 console.log('testing')
+	 console.log('test', $('input[name="duration"]:checked').val());
+	});
 
 
-$('form').on('submit', function(e){
- e.preventDefault();
- console.log('test', $('#test5').val());
 
+// $(document).ready(function(){
+//   $('.parallax').parallax();
+// });
+
+//custom directive
+var myApp = angular.module('myApp',[]);
+
+myApp.directive('myDirective', function () {
+    return function (scope, element, attr) {
+        element.val("value = "+ scope.$eval(attr.value));
+    }
 });
+
+// function MyCtrl($scope) {
+
+// }​
+
+

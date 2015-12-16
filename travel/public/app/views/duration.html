@@ -1,12 +1,12 @@
 <h1>Duration</h1>
 
-<div id="update"></div>
-<span id="value"></span>
-
-  <form action="#">
-    <p class="range-field">
-      <input type="range" id="test5" min="0" max="7" />
-    </p>
-    <button type='submit'>Next</button>
-  </form>
+<form ng-submit='saveDuration()' id='durationForm'>
+	<input id='myRadioBtn' type="radio" ng-model="duration" value="1">1<br>
+	<input id='myRadioBtn' type="radio" ng-model="duration" value="2">2</br>
+	<input id='myRadioBtn' type="radio" ng-model="duration" value="3">3</br>
+	<input id='myRadioBtn' type="radio" ng-model="duration" value="4">4</br>
+	<input id='myRadioBtn' type="radio" ng-model="duration" value="5">5</br>
+	<button type='submit'>Next</button>
+</form>
+ 
 

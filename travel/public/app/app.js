@@ -1,4 +1,4 @@
-var app = angular.module('TravelApp', ['TravelServices', 'TravelCtrls', 'ngRoute', 'ui.materialize']);
+var app = angular.module('TravelApp', ['TravelServices', 'TravelCtrls', 'ngRoute']);
 
 app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
   $routeProvider
@@ -14,14 +14,16 @@ app.config(['$routeProvider', '$locationProvider', function($routeProvider, $loc
     controller: 'ShowCtrl'
   })
   .when('/duration', {
-    templateUrl: 'app/views/duration.html'
-  })
-  .when('/:id', {
-    templateUrl: 'app/views/:id.html'
+    templateUrl: 'app/views/duration.html',
+    controller: 'DurCtrl'
   })
   .when('/itenerary', {
     templateUrl: 'app/views/itenerary.html'
+    // controller: 'iteneraryCtrl'
   })
+  // .when('/:id', {
+  //   templateUrl: 'app/views/:id.html'
+  // })
   .otherwise({
     templateUrl: 'app/views/404.html'
   });
