@@ -20,8 +20,6 @@ angular.module('TravelCtrls', ['TravelServices']).controller('TravelCtrl', ['$sc
     $scope.city = FilteredCity.city;
     $scope.filteredCity = FilteredCity.filteredCity;
     $scope.saveDestination = FilteredCity.saveDestination;
-    // var myCity = FilteredCity.filteredCity
-    // console.log(FilteredCity.city)
     console.log(myCity)
 
     //duration
@@ -32,9 +30,6 @@ angular.module('TravelCtrls', ['TravelServices']).controller('TravelCtrl', ['$sc
 }])
 
 .controller('ItineraryCtrl', ['$scope', '$location', 'Travel', 'Activities', 'FilteredCity', function($scope, $location, Travel, Activities, FilteredCity) {
-    // not working:
-    // Travel.findOne({ filter: { where: { duration: 4 } && {destination: 'Seattle'}} });
-    // $scope.showItenerary = data;
     $scope.travels = [];
     Travel.query(function success(data) {
         console.log(data);

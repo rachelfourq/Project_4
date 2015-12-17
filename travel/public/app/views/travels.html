@@ -1,66 +1,50 @@
+<div class='hp'>
 <h1>splashpage</h1>
 <a href="/about">About</a>
-<a href="/show">View All Destinations</a>
 
-<div class="well">
+
 <h2>TravelWell.</h2>
 <p>In order to be well-traveled, one must to travel well.</p>
 <h4>How it works</h4>
 <p>Select your destination</p>
 <p>Give us the amount of time you have to explore a city</p>
 <p>TravelWell will give you the most optimized timeline to hit the best, well-kept secrets of the city. Eat, drink, shop and explore like a local!</p>
+<hr>
+
+<div>
+<h1>How it works</h1>
+<div class='row' id='howto'>
+  <div class="col s12 m3" id='circle'>
+    <i class="fa fa-hand-o-up fa-4x"></i>
+    <p></p>
+    <p>SELECT YOUR DESTINATION</p>
+  </div>
+  <div class="col s12 m3" id='circle'>
+    <i class="fa fa-calendar fa-4x"></i>
+    <p></p>
+    <p>SELECT YOUR DURATION</p>
+  </div>
+  <div class="col s12 m3" id='circle'>
+    <i class="fa fa-plane fa-4x"></i>
+    <p></p>
+    <p>EXPLORE A NEW CITY LIKE A LOCAL</p>
+  </div>
+</div>
 </div>
 
-
+<hr>
 
 <div class="row">
+<h2>Choose a city to explore</h2>
   <div class="col s12 m4" ng-repeat='destination in city'>
     <div class="card">
       <div class="card-image">
       <a href='/duration' ng-click="saveDestination(destination.name)">
-            <!-- img not working.. hmmm -->
         <img ng-src="{{destination.image}}">
       </a>
       </div>
     </div>
   </div>
 </div>  
-
-
-
-<div class='row'>
-  <div class="col s12 m3">
-    <div class="card">
-      <div class="card-image">
-      <a href='/duration' ng-click="saveDestination(destination.name)"=>
-        <img src="http://s392.photobucket.com/user/RachelFourq/media/IMG_3496_zps4xrrmved.jpg.html">
-        <span class="card-title">SEATTLE</span>
-      </a>
-      </div>
-    </div>
-  </div>
-<div class='row'>
-  <div class="col s12 m3">
-    <div class="card">
-      <div class="card-image">
-      <a href='/duration' ng-click="saveDestination(destination.name)"=>
-        <img src="https://www.flickr.com/photos/136950467@N03/23173868744/in/dateposted-public/">
-        <span class="card-title">AUSTIN</span>
-      </a>
-      </div>
-    </div>
-  </div>
-  <div class="col s12 m3">
-    <div class="card">
-      <div class="card-image">
-      <a href='/duration' ng-model="destination" value='new orleans'>
-        <img src="https://www.flickr.com/photos/136950467@N03/23775913846/in/dateposted-public/">
-        <span class="card-title">NEW ORLEANS</span>
-      </a>
-      </div>
-    </div>
-  </div>
 </div>
-
-
   

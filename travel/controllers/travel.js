@@ -79,6 +79,14 @@ router.route('/:id/activities/:activity')
         });
       });
   });
+})
+  .delete(function(req, res) {
+    Travel.findById(req.params.id, function(err, travel) {
+      Activities.findById(req.params.activity, function(err, activity) {
+      if (err) return res.status(500).send(err);
+      res.send({'message': 'success'});
+    });  
+  });
 });
 
 module.exports = router;

@@ -3,12 +3,13 @@
 
 <div class="itnContainer">
     <div ng-repeat="trip in travels | filter:{ destination: myCity } | filter:{ duration: myDuration }">
-    <h3>ACTIVITIES IN {{travel.destination}}!</h3>
-    <ul>
-      <li ng-repeat="activity in trip.activities">
-        {{activity.name}}
-      </li>
-    </ul>
+      <div ng-repeat="activity in trip.activities">
+        <h2>{{activity.name}}</h2>
+        <p>Day: {{activity.day}}<p>
+        <h3>{{activity.address}}</h3>
+        <p>{{activity.description}}</p>
+      </div>
+
         <!-- THIS IS MY TRIP YO! <p> {{ trip }}</p>
         <div ng-repeat="activity in activities | filter:{ _id: trip.activities[0]._id }">
           AND THIS IS ANY ACTIVITY: {{activity}}
@@ -17,20 +18,7 @@
         <!-- <p> {{ trip.duration }}</p> -->
     </div>
 </div>
-<!-- {{travels}}<br>
-{{activities}} -->
-<!-- this is my city: {{myCity}}<br>
-this is my duration: {{myDuration}} -->
-<!-- {{showTrips}}
-City: {{filteredCity}} -->
 
-
-
-
-<!-- <div class="well" ng-repeat="trip in showTrips">
-  <h2>{{trip.destination}}</h2>
-  <h4>{{trip.name}}</h4>  
-</div> -->
 
 <!-- <div class="container">
   <div class="page-header">

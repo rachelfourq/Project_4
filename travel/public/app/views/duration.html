@@ -1,6 +1,11 @@
 <h1>Duration</h1>
  
-  <div class="col s12 m3" ng-repeat='time in duration'>
+ <div class='card'>
+ <h1>How long will you be in {{myCity}}</h1>
+ <div class='row'>
+  <div id='dur' class="col s2" ng-repeat='time in duration'>
         <a href='/itinerary' ng-click="saveDuration(time.value)">{{time.value}}
   		</a> 
-  </div>		     
+  </div>
+  </div>
+ </div> 		     

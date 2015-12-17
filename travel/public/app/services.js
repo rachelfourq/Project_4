@@ -11,15 +11,15 @@ angular.module('TravelServices', ['ngResource'])
 
 	var city = [{
         name: 'Seattle',
-        image: 'https://www.flickr.com/photos/136950467@N03/23802000085/in/dateposted-public/'
+        image: 'http://i392.photobucket.com/albums/pp8/RachelFourq/IMG_3496_zps4xrrmved.jpg'
     },
     {
         name: 'Austin',
-        image: 'https://www.flickr.com/photos/136950467@N03/23173868744/in/dateposted-public/'
+        image: 'http://i392.photobucket.com/albums/pp8/RachelFourq/IMG_3489_zps6neo4yxd.jpg'
     },
     {
         name: 'New Orleans',
-        image: 'https://www.flickr.com/photos/136950467@N03/23775913846/in/dateposted-public/'
+        image: 'http://i392.photobucket.com/albums/pp8/RachelFourq/IMG_3494_zpsm8t5tkgg.jpg'
     }];
 
     var duration = [{
