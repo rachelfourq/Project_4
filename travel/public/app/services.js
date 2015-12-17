@@ -11,15 +11,15 @@ angular.module('TravelServices', ['ngResource'])
 
 	var city = [{
         name: 'Seattle',
-        image: "./img/seattle.jpeg"
+        image: './app/img/bw_sea.jpg'
     },
     {
         name: 'Austin',
-        image: ''
+        image: './app/img/bw_aus.jpg'
     },
     {
         name: 'New Orleans',
-        image: ''
+        image: './app/img/bw_no.jpg'
     }];
 
     var duration = [{

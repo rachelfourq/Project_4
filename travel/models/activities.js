@@ -6,6 +6,8 @@ var ActivitiesSchema = new mongoose.Schema({
   name: String,
   length: Number,
   address: String,
+  description: String,
+  image: String
 
 });
 

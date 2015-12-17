@@ -2,7 +2,7 @@
 <a href="/">Home</a>
 
 <div class="itnContainer">
-    <div ng-repeat="trip in showTrips | filter:{ destination: myCity }">
+    <div ng-repeat="trip in showTrips | filter:{ destination: myCity } | filter:{ duration: myDuration }">
 
         <p> {{ trip.destination }}</p>
         <p>{{ trip.name }}</p>
