@@ -36,6 +36,28 @@ router.route('/:id')
       res.send({'message': 'success'});
   });
 });
+router.route('/:id/activities/')
+  .get(function(req, res) {
+    console.log('travel')
+    Travel.findById(req.params.id, function(err, travel) {
+      console.log('inside travel')
+      if (err) return res.status(500).send(err);
+      res.send(travel.activities);
+  });
+})
+  .post(function(req, res) {
+    Travel.findById(req.params.id, function(err, travel) {
+      console.log(req.body)
+      console.log(travel)
+      travel.activities.push(req.body);
+      travel.save(function(err) {
+      if (err) return res.status(500).send(err);
+      res.send({'message': 'success'});
+    })
+    });
+  })
+
+
 
 router.route('/:id/activities/:activity')
   .get(function(req, res) {

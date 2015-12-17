@@ -1,5 +1,9 @@
-/*radio btns*/
+.card {
+ margin-left: 10%;
+ margin-right: 10%;
+}
 
+/*radio btns*/
 #myRadioBtn {
   visibility: visible !important;
   position: relative;
@@ -7,7 +11,7 @@
   left: 0px;
 }
 
-/*itenerary*/
+/*itinerary*/
 .timeline {
   list-style: none;
   padding: 20px 0 20px;

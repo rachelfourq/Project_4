@@ -2,16 +2,25 @@
 <a href="/">Home</a>
 
 <div class="itnContainer">
-    <div ng-repeat="trip in showTrips | filter:{ destination: myCity } | filter:{ duration: myDuration }">
-
-        <p> {{ trip.destination }}</p>
-        <p>{{ trip.name }}</p>
-        <p> {{ trip.duration }}</p>
+    <div ng-repeat="trip in travels | filter:{ destination: myCity } | filter:{ duration: myDuration }">
+    <h3>ACTIVITIES IN {{travel.destination}}!</h3>
+    <ul>
+      <li ng-repeat="activity in trip.activities">
+        {{activity.name}}
+      </li>
+    </ul>
+        <!-- THIS IS MY TRIP YO! <p> {{ trip }}</p>
+        <div ng-repeat="activity in activities | filter:{ _id: trip.activities[0]._id }">
+          AND THIS IS ANY ACTIVITY: {{activity}}
+        </div> -->
+        <!-- <p>{{ trip.name }}</p> -->
+        <!-- <p> {{ trip.duration }}</p> -->
     </div>
 </div>
-
-{{myCity}}
-{{myDuration}}
+<!-- {{travels}}<br>
+{{activities}} -->
+<!-- this is my city: {{myCity}}<br>
+this is my duration: {{myDuration}} -->
 <!-- {{showTrips}}
 City: {{filteredCity}} -->
 

@@ -14,15 +14,12 @@
 
 
 <div class="row">
-  <div class="col s12 m3" ng-repeat='destination in city'>
+  <div class="col s12 m4" ng-repeat='destination in city'>
     <div class="card">
       <div class="card-image">
       <a href='/duration' ng-click="saveDestination(destination.name)">
             <!-- img not working.. hmmm -->
-    <!--     <img ng-src={{destination.image}}></img> -->
-        <!-- <img ng-src='"{{destination.image}}"'> -->
-        <p>{{destination.image}}</p>
-        <span class="card-title">{{destination.name}}</span>
+        <img ng-src="{{destination.image}}">
       </a>
       </div>
     </div>
@@ -31,16 +28,23 @@
 
 
 
-
-
-
-<!-- 
 <div class='row'>
   <div class="col s12 m3">
     <div class="card">
       <div class="card-image">
-      <a href='/duration' ng-model="destination" value='austin'>
-        <img src="https://images.unsplash.com/photo-1422157245273-e08b638b4b00?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1325">
+      <a href='/duration' ng-click="saveDestination(destination.name)"=>
+        <img src="http://s392.photobucket.com/user/RachelFourq/media/IMG_3496_zps4xrrmved.jpg.html">
+        <span class="card-title">SEATTLE</span>
+      </a>
+      </div>
+    </div>
+  </div>
+<div class='row'>
+  <div class="col s12 m3">
+    <div class="card">
+      <div class="card-image">
+      <a href='/duration' ng-click="saveDestination(destination.name)"=>
+        <img src="https://www.flickr.com/photos/136950467@N03/23173868744/in/dateposted-public/">
         <span class="card-title">AUSTIN</span>
       </a>
       </div>
@@ -50,13 +54,13 @@
     <div class="card">
       <div class="card-image">
       <a href='/duration' ng-model="destination" value='new orleans'>
-        <img src="https://images.unsplash.com/photo-1422157245273-e08b638b4b00?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1325">
+        <img src="https://www.flickr.com/photos/136950467@N03/23775913846/in/dateposted-public/">
         <span class="card-title">NEW ORLEANS</span>
       </a>
       </div>
     </div>
   </div>
-</div> -->
+</div>
 
 
   
