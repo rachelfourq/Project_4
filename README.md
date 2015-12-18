@@ -1,4 +1,7 @@
 # TravelWell
+## Link to deployed project
+travelwell.herokuapp.com
+
 ### About
 "In order to be well-traveled, one must Travel Well."
 TravelWell is an app based off of the New York Times, 36 Hours. It is a travel app that gives you an itinerary for (currently) 3 cities -- Austin, Seattle and New Orleans. The user starts by selecting one of the available destinations and then selecting how long they will be visiting the city. An iternary will be generated for the user allowing them to explore the city "like a local."
