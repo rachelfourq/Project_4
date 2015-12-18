@@ -1,6 +1,6 @@
 # TravelWell
 ### Link to deployed project
-####[Deployed Project Link](travelwell.herokuapp.com)
+####[Deployed Project Link](http://travelwell.herokuapp.com)
 
 ### About
 "In order to be well-traveled, one must Travel Well."
