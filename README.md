@@ -1,5 +1,5 @@
 # TravelWell
-## Link to deployed project
+### Link to deployed project
 travelwell.herokuapp.com
 
 ### About
